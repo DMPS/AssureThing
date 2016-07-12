@@ -23,4 +23,13 @@ export class LoginPage {
   onButtonClick(event){
     this.nav.setRoot(this.NextPage)
   }
+  getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(this.savePosition);
+    } else {
+    }
+}
+  savePosition(position) {
+  console.log(position)  
+}
 }
