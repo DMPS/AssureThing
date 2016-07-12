@@ -1,4 +1,9 @@
-<ion-title>Report</ion-title>
+<ion-header>
+  <ion-navbar>
+    <ion-icon name="ion-map"></ion-icon>
+    <ion-title>Choose Location</ion-title>
+  </ion-navbar>
+</ion-header>
 <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
 <ion-list>
   <ion-item *ngFor="let item of items" (click)='locationClicked()'>

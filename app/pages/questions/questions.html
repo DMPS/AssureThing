@@ -1,11 +1,20 @@
+<ion-header>
+  <ion-navbar>
+    <ion-icon name="ion-edit"></ion-icon>
+    <ion-title>Report</ion-title>
+  </ion-navbar>
+</ion-header>
 <ion-list>
   <ion-item>
-    <ion-label>How many wires are in a <br> position to trip a member of the public?</ion-label>
-    <ion-range min="1" max="5" step="1" snaps="true" pin="true" [(ngModel)]="hangingWires"></ion-range>
+    <ion-label>Are there any tripping hazards?</ion-label>
+      <ion-select [(ngModel)]="tripping hazards">
+        <ion-option value="Yes">Yes</ion-option>
+        <ion-option value="No">No</ion-option>
+      </ion-select>
   </ion-item>
   <ion-item>
     <ion-label>Do the lights work?</ion-label>
-      <ion-select [(ngModel)]="circulation">
+      <ion-select [(ngModel)]="lighting">
         <ion-option value="Yes">Yes</ion-option>
         <ion-option value="No">No</ion-option>
       </ion-select>
@@ -24,7 +33,7 @@
   </ion-item>
   <ion-item>
     <ion-label>Do the oyster gates work properly?</ion-label>
-      <ion-select [(ngModel)]="sight">
+      <ion-select [(ngModel)]="oysterGates">
         <ion-option value="Yes">Yes</ion-option>
         <ion-option value="No">No</ion-option>
       </ion-select>
