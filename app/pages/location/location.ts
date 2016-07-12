@@ -41,5 +41,6 @@ export class LocationPage {
   }
   locationClicked(event){
     this.nav.push(this.NextPage)
+    console.log('wassup')
   }
 }
