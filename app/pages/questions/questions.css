@@ -1,3 +1,22 @@
-.questions{
-    width: 10
+.toolbar-background {
+    background: #fff;
+    border-color: transparent;
+}
+
+.slide-zoom {
+    height: 100%;
+}
+
+.slide-title {
+    margin-top: 2.8rem;
+}
+
+.slide-image {
+    max-height: 50%;
+    max-width: 60%;
+    margin: 18px 0;
+}
+
+b {
+    font-weight: 500;
 }
