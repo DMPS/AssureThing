@@ -5,7 +5,11 @@
   </ion-navbar>
 </ion-header>
 <ion-content>
-  <ion-slides pager>
+  <ion-slides #questionsSlider (ionDidChange)="recordData()" pager>
+    <ion-slide>
+      <h1>Ready?</h1>
+      <p>Slide left to begin.</p>
+    </ion-slide>
     <ion-slide *ngFor='let question of questions; let i = index;' [answers]='answers'>
       <h1>{{question.text}}</h1>
       <ion-select [(ngModel)]='answers[i]' *ngIf='question.answerType==boolean'>

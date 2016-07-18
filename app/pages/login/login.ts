@@ -25,11 +25,15 @@ export class LoginPage {
   }
   getLocation() {
     if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition(this.savePosition);
+      let x:string = 'blank';
+        navigator.geolocation.getCurrentPosition(function (position:any) {
+          console.log(x)
+          console.log('Timestamp:'+position.timestamp,'Coordinates:'+position.coords.latitude+','+position.coords.longitude)
+        });
     } else {
     }
 }
   savePosition(position) {
-  console.log(position)  
+    
 }
 }
