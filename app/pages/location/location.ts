@@ -1,9 +1,12 @@
 import {Component} from '@angular/core';
 import {QuestionsPage} from '../questions/questions'
+import {LoginPage} from '../login/login'
 import {NavController, NavParams} from 'ionic-angular';
+import {AuthData} from '../../providers/auth-data/auth-data'
 
 @Component({
-  templateUrl: 'build/pages/location/location.html'
+  templateUrl: 'build/pages/location/location.html',
+  providers:[AuthData]
 })
 export class LocationPage {
   private searchQuery: any;
@@ -11,10 +14,12 @@ export class LocationPage {
   private NextPage:any;
   private UserName:string;
 
-  constructor(private nav: NavController, private navParams: NavParams) {
+
+  constructor(private nav: NavController,public authData: AuthData) {
     this.searchQuery = '';
     this.initializeItems();
     this.NextPage = QuestionsPage
+    this.authData = authData
   }
   initializeItems() {
     this.items = [
@@ -42,5 +47,10 @@ export class LocationPage {
   locationClicked(event){
     this.nav.push(this.NextPage)
     console.log('wassup')
+  }
+  logOut(){
+    this.authData.logoutUser().then(() => {
+      this.nav.rootNav.setRoot(LoginPage);
+    });
   }
 }
