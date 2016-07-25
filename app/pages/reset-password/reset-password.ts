@@ -19,8 +19,8 @@ export class ResetPasswordPage {
       email: ['', Validators.required],
     })
   }
-
   resetPassword(event){
+    //Display loading until password reset is done
     event.preventDefault();
     this.authData.resetPassword(this.resetPasswordForm.value.email);
     let loading = Loading.create({

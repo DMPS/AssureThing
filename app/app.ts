@@ -12,7 +12,7 @@ export class MyApp {
   rootPage: any;
 
   constructor(platform: Platform) {
-    var config = {
+    const config = {
       apiKey: "AIzaSyABOUCttHClIfbbQha7TAKxDxN4pjk5Wt4",
       authDomain: "crossraildemo-6d202.firebaseapp.com",
       databaseURL: "https://crossraildemo-6d202.firebaseio.com",

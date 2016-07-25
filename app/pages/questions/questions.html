@@ -8,10 +8,11 @@
   <ion-slides #questionsSlider (ionDidChange)="recordData()" pager>
     <ion-slide>
       <h1>Ready?</h1>
-      <p>Slide left to begin.</p>
+      <p>Slide right to begin.</p>
     </ion-slide>
     <ion-slide *ngFor='let question of questions; let i = index;' [answers]='answers'>
       <h1>{{question.text}}</h1>
+      <h2>Answer in the space below</h2>
       <ion-select [(ngModel)]='answers[i]' *ngIf='question.answerType==boolean'>
         <ion-option value="Yes">Yes</ion-option>
         <ion-option value="No">No</ion-option>

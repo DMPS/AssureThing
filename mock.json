@@ -1,0 +1,23 @@
+{
+    "assurers":{
+        "XXXXXX":{
+            "Farringdon":{
+                "metadata":{
+                    "duration":100,
+                    "latitude":929202,
+                    "longitude":898993
+                },
+                "answers":["Yes","No",42]
+            }
+        }
+    },
+    "locations":{
+        "Farringdon":[
+            {"text":"Are there any tripping hazards?","answerType":"boolean"},
+            {"text":"Do the lights work?","answerType":"boolean"},
+            {"text":"Are there any damage marks on the entrance?", "answerType":"boolean"},
+            {"text":"How wide is the platform?","answerType":"number"},
+            {"text":"Do the oyster gates work properly?","answerType":"boolean"}
+        ]
+    }
+}

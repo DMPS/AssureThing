@@ -17,13 +17,14 @@ export class LoginPage {
   constructor(public nav: NavController, public authData: AuthData, public formBuilder: FormBuilder) {
     this.nav = nav;
     this.authData = authData;
-
+    //Creates the angular 2 form for login
     this.loginForm = formBuilder.group({
       email: ['', Validators.required],
       password: ['', Validators.required]
     })
   }
   loginUser(event){
+    //Shows loading until login is done
     event.preventDefault();
     this.authData.loginUser(this.loginForm.value.email, this.loginForm.value.password);
     let loading = Loading.create({
@@ -34,13 +35,4 @@ export class LoginPage {
   goToResetPassword(){
     this.nav.push(ResetPasswordPage);
   }
-  onTextEntered(value:string, position:number){
-    if (position=0) this.params.username = value;
-    if (position=1) this.params.password = value;
-    console.log(value)
-  }
-  onButtonClick(event){
-    this.nav.setRoot(this.NextPage)
-  }
-
 }

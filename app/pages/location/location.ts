@@ -13,8 +13,7 @@ export class LocationPage {
   private items: any;
   private NextPage:any;
   private UserName:string;
-
-
+  
   constructor(private nav: NavController,public authData: AuthData) {
     this.searchQuery = '';
     this.initializeItems();
@@ -46,7 +45,6 @@ export class LocationPage {
   }
   locationClicked(event){
     this.nav.push(this.NextPage)
-    console.log('wassup')
   }
   logOut(){
     this.authData.logoutUser().then(() => {
